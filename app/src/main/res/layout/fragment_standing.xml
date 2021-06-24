@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="515dp"
+    tools:context=".StandingFragment">
+
+    <TextView
+        android:id="@+id/fragment_txt_win"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="W"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_txt_draw"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rec_txt_game"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="P"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_txt_win"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_txt_point"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="PTS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_txt_gd"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="GD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_txt_point"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_txt_draw"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_txt_loss"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_txt_loss"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        android:gravity="center"
+        android:text="L"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_txt_gd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_txt_name"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:alpha="1"
+        android:background="#C9DBDD"
+        app:layout_constraintEnd_toStartOf="@+id/rec_txt_game"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_rec_standing"
+        android:layout_width="match_parent"
+        android:layout_height="453dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_txt_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

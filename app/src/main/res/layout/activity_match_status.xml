@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".matchStatusActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:alpha="1"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/staduimnight" />
+
+    <TextView
+        android:id="@+id/status_txt_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stadium"
+        android:textAlignment="center"
+        android:textColor="#F1EBEB"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/status_img_home"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/status_img_away"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status_txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="#EAE8E8"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/status_img_away"
+        app:layout_constraintStart_toEndOf="@+id/status_img_home"
+        app:layout_constraintTop_toBottomOf="@+id/status_txt_venue" />
+
+    <TextView
+        android:id="@+id/status_txt_home"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#EFEAEA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/status_img_home"
+        app:layout_constraintStart_toStartOf="@+id/status_img_home"
+        app:layout_constraintTop_toBottomOf="@+id/status_img_home" />
+
+    <TextView
+        android:id="@+id/status_txt_away"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#EFEAEA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/status_img_away"
+        app:layout_constraintStart_toStartOf="@+id/status_img_away"
+        app:layout_constraintTop_toBottomOf="@+id/status_img_away" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="110dp"
+        android:text="Ft"
+        android:textAlignment="center"
+        android:textColor="#F1EEEE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/status_txt_score"
+        app:layout_constraintStart_toStartOf="@+id/status_txt_score" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/grass"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/status_txt_away_offside"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_offside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_offside" />
+
+            <TextView
+                android:id="@+id/status_txt_offside"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Offside"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_offside"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_offside"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_corners" />
+
+            <TextView
+                android:id="@+id/status_txt_possesion"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Substitutions"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_possesion"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_possesion"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_pass" />
+
+            <TextView
+                android:id="@+id/status_txt_home_possesion"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_possesion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_possesion" />
+
+            <TextView
+                android:id="@+id/status_txt_away_possesion"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_possesion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_possesion" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_possesion"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_possesion"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_possesion"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_possesion" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_possesion"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_possesion"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_possesion"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_possesion" />
+
+            <TextView
+                android:id="@+id/status_txt_pass"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Goal Attempts"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_pass"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_pass"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/status_txt_home_pass"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_pass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_pass" />
+
+            <TextView
+                android:id="@+id/status_txt_away_pass"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_pass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_pass" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_pass"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_pass"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_pass"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_pass" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_pass"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_pass"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_pass"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_pass"
+                app:layout_constraintVertical_bias="0.478" />
+
+            <TextView
+                android:id="@+id/status_txt_shots"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Shots"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_shots"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_shots"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_possesion" />
+
+            <TextView
+                android:id="@+id/status_txt_home_shots"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_shots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_shots" />
+
+            <TextView
+                android:id="@+id/status_txt_away_shots"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_shots"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_shots" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_shots"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_shots"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_shots"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_shots" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_shots"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_shots"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_shots"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_shots" />
+
+            <TextView
+                android:id="@+id/status_txt_ontarget"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Shots on Target"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_ontarget"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_ontarget"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_shots" />
+
+            <TextView
+                android:id="@+id/status_txt_home_ontarget"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_ontarget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_ontarget" />
+
+            <TextView
+                android:id="@+id/status_txt_away_ontarget"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_ontarget"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_ontarget" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_ontarget"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_ontarget"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_ontarget"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_ontarget" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_ontarget"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_ontarget"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_ontarget"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_ontarget" />
+
+            <TextView
+                android:id="@+id/status_txt_freekick"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Free Kick"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_freekick"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_freekick"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_ontarget" />
+
+            <TextView
+                android:id="@+id/status_txt_away_freekick"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_freekick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_freekick" />
+
+            <TextView
+                android:id="@+id/status_txt_home_freekick"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_freekick"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_freekick" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_freekick"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_freekick"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_freekick"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_freekick" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_freekick"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_freekick"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_freekick"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_freekick" />
+
+            <TextView
+                android:id="@+id/status_txt_corners"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Corners"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_corners"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_corners"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_freekick" />
+
+            <TextView
+                android:id="@+id/status_txt_home_corners"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_corners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_corners" />
+
+            <TextView
+                android:id="@+id/status_txt_away_corners"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_corners"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_corners"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_corners"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_corners"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_corners"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_corners"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_corners"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_corners"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_corners" />
+
+            <TextView
+                android:id="@+id/status_txt_home_offside"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_offside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_offside" />
+
+            <TextView
+                android:id="@+id/status_txt_home_fouls"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_fouls"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_fouls" />
+
+            <TextView
+                android:id="@+id/status_txt_fouls"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Fouls"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_fouls"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_fouls"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_offside" />
+
+            <TextView
+                android:id="@+id/status_txt_away_fouls"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_fouls"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_fouls" />
+
+            <TextView
+                android:id="@+id/status_txt_home_yellow"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_yellow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_yellow" />
+
+            <TextView
+                android:id="@+id/status_txt_yellow"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Yellow Card"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_yellow"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_yellow"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_fouls" />
+
+            <TextView
+                android:id="@+id/status_txt_away_yellow"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_yellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_yellow" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_offside"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_offside"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_offside"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_offside" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_offside"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_offside"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_offside"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_offside" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_fouls"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_fouls"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_fouls"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_fouls" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_fouls"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_fouls"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_fouls"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_fouls" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_yellow"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_yellow"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_yellow"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_yellow" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_yellow"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_yellow"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_yellow"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_yellow" />
+
+            <TextView
+                android:id="@+id/status_txt_home_red"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="86"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_home_red"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_home_red" />
+
+            <TextView
+                android:id="@+id/status_txt_red"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="15dp"
+                android:text="Red Card"
+                android:textAlignment="center"
+                android:textColor="#191717"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/status_pgb_away_red"
+                app:layout_constraintStart_toEndOf="@+id/status_pgb_home_red"
+                app:layout_constraintTop_toBottomOf="@+id/status_txt_yellow" />
+
+            <TextView
+                android:id="@+id/status_txt_away_red"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="#151414"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/status_pgb_away_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/status_pgb_away_red" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_home_red"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:progress="45"
+                android:progressDrawable="@drawable/progressbar"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_red"
+                app:layout_constraintStart_toEndOf="@+id/status_txt_home_red"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_red" />
+
+            <ProgressBar
+                android:id="@+id/status_pgb_away_red"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintBottom_toBottomOf="@+id/status_txt_red"
+                app:layout_constraintEnd_toStartOf="@+id/status_txt_away_red"
+                app:layout_constraintTop_toTopOf="@+id/status_txt_red" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/status_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="dkfjdkfj"
+        android:textColor="#F8F5F5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

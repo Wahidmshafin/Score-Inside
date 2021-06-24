@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score Inside</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="seasons">
+        <item>20-21</item>
+        <item>19-20</item>
+        <item>18-19</item>
+    </string-array>
+</resources>
