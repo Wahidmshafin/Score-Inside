@@ -18,4 +18,8 @@ To create this app I used,
 
 3.[Picasso Library](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library) for showing images.
 
+The app looks like this :
 
+(https://raw.githubusercontent.com/Wahidmshafin/Score-Inside/master/Image%20Welcome.png)
+
+This is the Welcome Page.
