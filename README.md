@@ -1,7 +1,9 @@
 # Score-Inside
+
 This is a Football Score app.
 In this app You can select an particualr season of particular league, 
 and get->
+
 1. Fixture
 2. Result
 3. Standing 
@@ -12,18 +14,18 @@ The whole code is written in java.
 
 To create this app I used,
 
-1.[Sportdataapi](https://app.sportdataapi.com/) for api data Where the maximum number of call is 500
+ ### 1. [Sportdataapi](https://app.sportdataapi.com/) for api data Where the maximum number of call is 500
 
-2.[Retrofit Library](https://square.github.io/retrofit/) for https request.
+### 2.[Retrofit Library](https://square.github.io/retrofit/) for https request.
 
-3.[Picasso Library](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library) for showing images.
+### 3.[Picasso Library](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library) for showing images.
 
 The app looks like this :
 
-This is The Welcome Page:
+## This is The Welcome Page:
 
-![image](https://user-images.githubusercontent.com/65916726/123305177-a2737c00-d541-11eb-8dae-e088ff3233a0.png)
-
+![image]()
+<img alt="Welcome Page" src="https://user-images.githubusercontent.com/65916726/123305177-a2737c00-d541-11eb-8dae-e088ff3233a0.png" width=50%>
 
 This is the League List Page.
 
